@@ -21,7 +21,7 @@ const Login = () => {
         setLoading(true);
 
         const res = await axios.post(
-          "http://localhost:5008/api/v1/users/login",
+          "https://naijaparrot.vercel.app/api/v1/users/login",
           {
             email: values.email.trim().toLowerCase(),
             password: values.password,

@@ -43,7 +43,7 @@ const AdminUsers = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        "http://localhost:5008/api/v1/users/getUsers",
+        "https://naijaparrot.vercel.app/api/v1/users/getUsers",
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -110,7 +110,7 @@ const AdminUsers = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.delete(
-        `http://localhost:5008/api/v1/users/deleteUser/${selectedUser._id}`,
+        `https://naijaparrot.vercel.app/api/v1/users/deleteUser/${selectedUser._id}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -131,7 +131,7 @@ const AdminUsers = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://localhost:5008/api/v1/users/updateUserRole/${selectedUser._id}`,
+        `https://naijaparrot.vercel.app/osapi/v1/users/updateUserRole/${selectedUser._id}`,
         { role: selectedUser.role === "admin" ? "user" : "admin" }, // Toggle role
         {
           headers: { Authorization: `Bearer ${token}` }

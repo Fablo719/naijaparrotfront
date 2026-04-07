@@ -15,7 +15,7 @@ const AdminPosts = () => {
   const fetchPosts = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5008/api/v1/posts/admin/posts",
+        "https://naijaparrot.vercel.app/api/v1/posts/admin/posts",
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setPosts(data.posts || []);
@@ -31,7 +31,7 @@ const AdminPosts = () => {
 
     try {
       await axios.delete(
-        `http://localhost:5008/api/v1/posts/admin/post/${postId}`,
+        `https://naijaparrot.vercel.app/api/v1/posts/admin/post/${postId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       toast.success("Post deleted successfully");

@@ -25,7 +25,7 @@ const Register = () => {
         console.log("Attempting to register with:", values);
 
         const response = await axios.post(
-          "http://localhost:5008/api/v1/users/register",
+          "https://naijaparrot.vercel.app/api/v1/users/register",
           {
             firstName: values.firstName.trim(),
             lastName: values.lastName.trim(),

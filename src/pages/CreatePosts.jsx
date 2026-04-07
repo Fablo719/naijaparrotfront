@@ -132,7 +132,7 @@ const CreatePost = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5008/api/v1/posts/createPost",
+        "https://naijaparrot.vercel.app/api/v1/posts/createPost",
         payload,
         {
           headers: { Authorization: `Bearer ${token}` }

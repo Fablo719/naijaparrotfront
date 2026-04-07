@@ -47,7 +47,7 @@ const Home = () => {
     const fetchPosts = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:5008/api/v1/posts/getAllPosts",
+                "https://naijaparrot.vercel.app/api/v1/posts/getAllPosts",
                 {
                     headers: { "Authorization": `Bearer ${localStorage.getItem("token")}` }
                 }
@@ -71,7 +71,7 @@ const Home = () => {
         setIsSearching(true);
         try {
             const response = await axios.get(
-                `http://localhost:5008/api/v1/posts/search?q=${searchQuery}`,
+                `https://naijaparrot.vercel.app//api/v1/posts/search?q=${searchQuery}`,
                 {
                     headers: { "Authorization": `Bearer ${localStorage.getItem("token")}` }
                 }
@@ -88,7 +88,7 @@ const handleLike = async (postId) => {
         try {
             const token = localStorage.getItem('token');
             const response = await axios.post(
-                `http://localhost:5008/api/v1/posts/${postId}/like`,
+                `https://naijaparrot.vercel.app/api/v1/posts/${postId}/like`,
                 {},
                 { headers: { "Authorization": `Bearer ${token}` } }
             );
@@ -312,7 +312,7 @@ const PostCard = ({ post, handleLike, currentUser }) => {
         if (!commentText.trim()) return;
         try {
             const response = await axios.post(
-                `http://localhost:5008/api/v1/posts/${post._id}/comment`,
+                `https://naijaparrot.vercel.app/api/v1/posts/${post._id}/comment`,
                 { comment: commentText },
                 { headers: { "Authorization": `Bearer ${localStorage.getItem("token")}` } }
             );

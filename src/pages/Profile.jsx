@@ -20,7 +20,7 @@ const Profile = () => {
 
         // ✅ Get logged-in user profile
         const userRes = await axios.get(
-          "http://localhost:5008/api/v1/users/me",
+          "https://naijaparrot.vercel.app/api/v1/users/me",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -45,7 +45,7 @@ const Profile = () => {
 
         // ✅ Fetch only this user's posts
         const postRes = await axios.get(
-          `http://localhost:5008/api/v1/posts/user/${userId}`,
+          `https://naijaparrot.vercel.app/api/v1/posts/user/${userId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -74,7 +74,7 @@ const Profile = () => {
       try {
         const token = localStorage.getItem("token");
 
-        await axios.delete(`http://localhost:5008/api/v1/posts/${postId}`, {
+        await axios.delete(`https://naijaparrot.vercel.app/api/v1/posts/${postId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
