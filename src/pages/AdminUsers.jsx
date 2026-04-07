@@ -131,7 +131,7 @@ const AdminUsers = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `https://naijaparrot.vercel.app/osapi/v1/users/updateUserRole/${selectedUser._id}`,
+        `https://naijaparrot.vercel.app/api/v1/users/updateUserRole/${selectedUser._id}`,
         { role: selectedUser.role === "admin" ? "user" : "admin" }, // Toggle role
         {
           headers: { Authorization: `Bearer ${token}` }
