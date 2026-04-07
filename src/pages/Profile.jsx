@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./Profile.css"; // Import the CSS file
+import "./profile.css"; // Import the CSS file
 
 const Profile = () => {
   const [user, setUser] = useState(null);
